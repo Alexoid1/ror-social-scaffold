@@ -4,9 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     timeline_posts
-    @friends_post = Post.find_by_sql(["SELECT posts.id, friendships.user_id,
-    friendships.friend_id, posts.content, posts.created_at
-    FROM posts JOIN friendships ON (posts.user_id=friendships.user_id )
+    @friends_post = Post.find_by_sql(["SELECT posts.id, friendships.user_id, friendships.friend_id, posts.content, posts.created_at FROM posts JOIN friendships ON (posts.user_id=friendships.user_id )
     WHERE friendships.friend_id=#{current_user.id} OR posts.user_id=#{current_user.id}  ORDER BY  posts.
    created_at DESC"]).uniq
   end
