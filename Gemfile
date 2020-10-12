@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
+gem 'hirb', '~> 0.7.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -42,10 +42,17 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'webdrivers'
 end
 
 group :test do
   gem 'rspec'
+  gem 'selenium-webdriver'
+  gem 'shoulda-callback-matchers', '~> 1.1.1'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
