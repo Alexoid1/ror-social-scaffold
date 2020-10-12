@@ -69,6 +69,10 @@ Open `http://localhost:3000/` in your browser.
 
 ![screenshot](docs/Diagrama.png)
 
+## Live Demo
+
+[Live Demo Link](https://social-media-appp.herokuapp.com/users/sign_in)
+
 ## Authors
 
 - Github: [@Alexoid1](https://github.com/Alexoid1)
